@@ -219,8 +219,55 @@ nav .right span{
     text-align: center;
 }
 
+/* SECTION 4: Contact */
+.contact-section{
+    padding:0 50px;
+    margin-bottom: 100px;
+}
+.contact-section h2{
+    font-size: 35px;
+}
+.contact-section .group{
+    display: flex;
+    gap: 50px;
+}
+.contact-section .group .text{
+    flex: 3;
+    margin-top: 20px;
+}
+.contact-section .group form{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
 
-/* NAVBAR */
+.contact-section .group form input,
+.contact-section .group form textarea{
+    font-family: 'Poppins',sans-serif;
+    border: 2px solid var(--link-color);
+    background-color: transparent;
+    padding: 10px;
+    margin-bottom: 15px;
+    outline: none;
+    resize: none;
+}
+
+.contact-section .group form button{
+    font-family: 'Poppins',sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background-color: var(--link-color);
+    border: none;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.contact-section .group form button:hover{
+    filter: brightness(0.9);
+}
+
+/* Footer */
 footer .right{
     display: flex;
     justify-content: space-between;
@@ -317,9 +364,9 @@ footer .right span{
     }
 
     /* SECTION 4: Contact */
-    /* .contact-section .group{
+    .contact-section .group{
         flex-direction: column;
-    } */
+    }
 }
 @media(max-width:630px){
     /* NAVBAR */
@@ -366,8 +413,8 @@ footer .right span{
         padding: 0 20px;
     }
     /* SECTION 4: Contact */
-    /* .contact-section{
+    .contact-section{
        padding: 0 20px;
-    } */
+    }
     
 }

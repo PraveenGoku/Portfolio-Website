@@ -166,16 +166,35 @@
                     Fill the form to reach out to me!
                 </div>
                 <form>
-                    <label for="name">Name</label>
-                    <input type="text" id="name">
+                    <label for="name">Name<span>*</span></label>
+                    <input type="text" id="name" required>
                     
-                    <label for="email">Email</label>
-                    <input type="email" id="email">
+                    <label for="email">Email<span>*</span></label>
+                    <input type="email" id="email" required>
                     
                     <label for=message">message</label>
                     <textarea id="message" cols="30" rows="10"></textarea>
+                    <!-- <script language="JavaScript">
+                        function confirmBox(){
+                        var yes= confirm("Would you like to proceed to home page")
+                            if(yes == true){
+                             // perform some function like taking the user to another page
+                            }
+                        
+                    }
+                    </script> -->
+                    <a class="button" href="#popup1">Send Message</a>
                     
-                    <button type="submit">Send Message</button>
+                    <div id="popup1" class="overlay">
+                        <div class="popup">
+                            <h2>Sent Succesfull</h2>
+                            <a class="close" href="#">×</a>
+                            <div class="content">
+                                now i'm done so you can close this window.
+                            </div>
+                        </div>
+                    </div>
+                    
                 </form>
             </div>
         </section>  

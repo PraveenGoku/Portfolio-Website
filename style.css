@@ -1,7 +1,7 @@
 :root{
   --text-color:#1a1c20;
   --link-color:#4a76ee;  
-  --background-color:#EAE2C6;;
+  --background-color:#EAE2C6;
 }
 
 *{
@@ -31,7 +31,8 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    position: sticky;
+    top: 0;
     background-color: #98D8EF;
     padding: 0px 50px;
     height: 80px;
@@ -61,7 +62,7 @@ nav .right span{
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
     gap:40px;
     margin-bottom: 100px;
     background-color: #EAE2C6;
@@ -110,8 +111,9 @@ nav .right span{
 
 /* SECTION 2: Skills */
 .skills-section{
-    padding: 0 50px;
-    margin-bottom: 100px; 
+    padding: 100px 100px;
+    /* margin-bottom: 100px;  */
+    background-color: #BFBBA9;
 }
 
 .skills-section h2{
@@ -156,8 +158,9 @@ nav .right span{
 
 /* SECTION 3: Projects */
 .project-section{
-    padding: 0 50px;
-    margin-bottom: 100px;
+    padding: 100px 50px;
+    /* margin-bottom: 100px; */
+    background-color: #D0DDD0;
 }
 
 .project-section h2{
@@ -197,8 +200,9 @@ nav .right span{
 
 /* SECTION 3: certification */
 .certification-section{
-    padding: 0 50px;
-    margin-bottom: 100px;
+    padding: 100px 50px;
+    /* margin-bottom: 100px; */
+    background-color: #FFE2E2;
 }
 
 .certification-section h2{
@@ -222,8 +226,9 @@ nav .right span{
 
 /* SECTION 4: Contact */
 .contact-section{
-    padding:0 50px;
-    margin-bottom: 100px;
+    padding:100px 50px;
+    /* margin-bottom: 100px; */
+    background-color: #D0DDD0;
 }
 .contact-section h2{
     font-size: 35px;
@@ -250,10 +255,14 @@ nav .right span{
     padding: 10px;
     margin-bottom: 15px;
     outline: none;
-    resize: none;
+    resize: vertical; 
+    max-height: 200px;
+}
+.contact-section .group form label span{
+    color: red;
 }
 
-.contact-section .group form button{
+.contact-section .group form .button{
     font-family: 'Poppins',sans-serif;
     font-size: 16px;
     color: #fff;
@@ -262,11 +271,67 @@ nav .right span{
     height: 50px;
     cursor: pointer;
     transition: 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .contact-section .group form button:hover{
     filter: brightness(0.9);
 }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  
+  .popup h2 {
+    padding:10px;
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 30px;
+    display: flex;
+    
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: orange;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
 
 /* Footer */
 footer .right{

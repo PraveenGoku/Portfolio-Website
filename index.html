@@ -183,9 +183,26 @@
                         
                     }
                     </script> -->
-                    <button class="button" href="#popup1">Send Message</button>
+                    <button class="button" onclick="geek()">Send Message</button>
+                    <p id="add"></p>
+
+                    <script>
+                        function geek() {
+                            let result = confirm("Press OK to close this option");
+                            if (result === true) {
+                
+                                document.getElementById("add").textContent = 
+                                "Message Sent successfully";
+                                console.log("User clicked OK");
+                            } else {
+                                document.getElementById("add").textContent = 
+                                "Message not Sent";
+                                console.log("User clicked Cancel");
+                            }
+                        }
+                    </script>
                     
-                    <div id="popup1" class="overlay">
+                    <!-- <div id="popup1" class="overlay">
                         <div class="popup">
                             <h2>Sent Succesfull</h2>
                             <a class="close" href="#">×</a>
@@ -193,9 +210,45 @@
                                 now i'm done so you can close this window.
                             </div>
                         </div>
-                    </div>
+                    </div> -->
+                    <button onclick="geek()">Try it</button>
+
+                    <script>
+                        function geek() {
+                            let result = confirm("Would You like to send message?");
+                            if (result === true) {
+                
+                                document.getElementById("add").textContent = 
+                                "User clicked OK";
+                                console.log("User clicked OK");
+                            } else {
+                                document.getElementById("add").textContent = 
+                                "User clicked Cancel";
+                                console.log("User clicked Cancel");
+                            }
+                        }
+                    </script>   
                     
+
+
                 </form>
+                <button onclick="geek()">Try it</button>
+
+                <script>
+                    function geek() {
+                        let result = confirm("Would You like to send message?");
+                        if (result === true) {
+            
+                            document.getElementById("add").textContent = 
+                            "User clicked OK";
+                            console.log("User clicked OK");
+                        } else {
+                            document.getElementById("add").textContent = 
+                            "User clicked Cancel";
+                            console.log("User clicked Cancel");
+                        }
+                    }
+                </script>
             </div>
         </section>  
         <!--NAVBAR-->
